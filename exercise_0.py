@@ -10,11 +10,17 @@
 # - Use a conditional statement to check if `python_is_fun` is `True`.
 # - If `python_is_fun` is `True`, print the message "Python is fun!"
 
+import random
+
 def print_greeting():
+    
+    greetings = ['Hello there', 'Wassup', 'Hey!', 'I see you!']
     # Your code goes here. Remember to indent!
     python_is_fun = True
     if python_is_fun:
         print("Python is fun!")
+    else:
+        print(random.choice(greetings))
 
 # Call the function
 print_greeting()

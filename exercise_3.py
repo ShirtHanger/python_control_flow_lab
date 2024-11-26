@@ -17,6 +17,21 @@
 # - Apply conditional logic to perform the correct age calculation based on the dog's age.
 
 def calculate_dog_years():
+    dog_age = int(input("Give me your dog's age: "))
+    # Declare conditional variables ahead of time
+    subsequent_years = 0
+    dog_years = 0
+    
+    
+    if dog_age > 2:
+        subsequent_years = dog_age - 2
+        
+    if subsequent_years > 0:
+        dog_years = (2 * 10) + (subsequent_years * 7)
+    else: 
+        dog_years = dog_age * 10
+    
+    print(dog_years)
     # Your control flow logic goes here
 
 # Call the function

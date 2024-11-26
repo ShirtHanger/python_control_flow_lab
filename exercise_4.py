@@ -14,8 +14,36 @@
 # Hints:
 # - Use logical operators (`AND`, `OR`, `NOT`) in your if statements to handle multiple conditions.
 
+yes_inputs = ['yes', 'y']
+no_inputs = ['no', 'n']
+
+valid_inputs = yes_inputs + no_inputs
+invalid_message = '"Yes" or "No" only: '
+
 def weather_advice():
     # Your control flow logic goes here
+    
+    cold = input('Is it cold: ').lower()
+    while cold not in valid_inputs:
+        cold = input(invalid_message)
+        
+    raining = input('Is it raining: ').lower()
+    while raining not in valid_inputs:
+        raining = input(invalid_message)
+        
+    if cold in yes_inputs:
+        
+        if raining in yes_inputs:
+            print('Wear a waterproof coat.')
+        else: # Cold and not raining
+            print('Wear a warm coat')
+            
+    else: #It's warm
+        if raining in yes_inputs:
+            print('Carry an umbrella')
+        else: # Warm and not raining
+            print('Wear light clothing.')
+    
 
 # Call the function
 weather_advice()

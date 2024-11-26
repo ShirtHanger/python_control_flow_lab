@@ -16,6 +16,15 @@
 
 def check_voting_eligibility():
     # Your control flow logic goes here
+    voting_age = 18
+    user_age = int(input('Enter your age: '))
+    while user_age < 1:
+        user_age = int(input('An actual age: '))
+    
+    if user_age >= voting_age:
+        print('You can vote!')
+    else:
+        print(f'You are {user_age}, you are too young to vote!')
 
 # Call the function
 check_voting_eligibility()

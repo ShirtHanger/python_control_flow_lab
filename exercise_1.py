@@ -15,8 +15,18 @@
 # - Utilize the `in` operator to check for vowels.
 # - Ensure to provide feedback for non-alphabetical or invalid entries.
 
+vowels = ['a', 'e', 'i', 'o', 'u']
+
 def check_letter():
-    # Your control flow logic goes here
+    
+    user_input = input('Give us a letter from A-Z: ')
+    while len(user_input) > 1:
+        user_input = input('... a singular letter: ')
+    if user_input.lower() in vowels:
+        print(f'{user_input} is a vowel')
+    else:
+        print(f'{user_input} is a consonant')
 
 # Call the function
+
 check_letter()
